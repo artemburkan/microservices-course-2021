@@ -2,7 +2,7 @@ import axios from "axios"
 import { useState } from "react"
 
 
-export const Post = () => {
+export const PostForm = () => {
   const [title, setTitle] = useState("")
 
   const onSubmit = async (event) => {
