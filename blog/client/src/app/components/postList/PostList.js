@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
 
+import { CommentForm } from "../commentForm/CommentForm"
+import { CommentList } from "../commentList/CommentList"
+
 
 export const PostList = () => {
   const [posts, setPosts] = useState({})
@@ -26,6 +29,8 @@ export const PostList = () => {
         <h3>
           {post.title}
         </h3>
+        <CommentList postId={post.id} />
+        <CommentForm postId={post.id} />
       </div>
     )
   })
